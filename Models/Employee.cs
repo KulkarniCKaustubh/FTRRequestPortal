@@ -7,6 +7,7 @@ using System.Web;
 
 namespace FTRRequestPortal.Models
 {
+    [Table("Employee")]
     public class Employee
     {
         [Key]
@@ -27,17 +28,10 @@ namespace FTRRequestPortal.Models
         public string Country { get; set; }
 
         [ForeignKey("GCM")]
-        [Required (ErrorMessage = " GCM LEVEL is required")]
-        public int GCM_Id { get; set; }
+        public int? GCM_Id { get; set; }
+        public GCM GCM { get; set; }
 
         [Required(ErrorMessage = "DasId is required")]
-        public string DAS_Id { get; set; }  
-
-
-
-
-
-
-
+        public string DAS_Id { get; set; }
     }
 }

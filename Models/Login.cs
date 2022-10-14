@@ -19,5 +19,9 @@ namespace FTRRequestPortal.Models
         [Required(ErrorMessage ="Password is required")]
         public string Password { get; set; }
 
+        [ForeignKey("Employee")]
+        public string Emp_Id { get; set; }
+        public Employee Employee { get; set; }
+
     }
 }

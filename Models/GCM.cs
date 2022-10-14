@@ -13,7 +13,7 @@ namespace FTRRequestPortal.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
-        public int? GCM_ID { get; set; }
+        public int? GCM_Id { get; set; }
 
         [Required(ErrorMessage = "GCM Level is required")]
         public string GCM_Level { get; set; }
